@@ -60,12 +60,12 @@ myDT$tmpDateTime <- NULL ## remove temp variable
 
 ## Plot3 ##
 png("data/plot3.png")
+par(bg = "transparent") ## matching original bg
 ylab <- "Energy sub metering"
 z <- range(myDT$datetime) # used for recreating tickmarks
 with(myDT, {
         plot(datetime, Sub_metering_1, 
-                type = "n", xlab = "", ylab = ylab, 
-                        axes = F, bg = "transparent") ## matching original bg
+                type = "n", xlab = "", ylab = ylab, axes = F)
         ## fixing grey box / black axes issue
         box(col="grey31")
         axis(1, at=c(z[1], median(z)+30, z[2]+60), 

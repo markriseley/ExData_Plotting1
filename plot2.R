@@ -59,12 +59,12 @@ myDT$tmpDateTime <- NULL ## remove temp variable
 
 ## Plot2 ##
 png("data/plot2.png")
+par(bg = "transparent")
 ylab <- "Global Active Power (kilowatts)"
 z <- range(myDT$datetime) # used for recreating tickmarks
 with(myDT, {
         plot(datetime, Global_active_power, 
-                type = "l", xlab = "", ylab = ylab,
-                        axes = F, bg = "transparent")
+                type = "l", xlab = "", ylab = ylab, axes = F)
         box(col="grey31")
         ## Hacky way to recreate black axes on grey plot border as per original
         ## No luck finding default changing for 

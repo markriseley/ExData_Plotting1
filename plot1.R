@@ -61,6 +61,7 @@ myDT$tmpDateTime <- NULL ## remove temp variable
 xlab <- "Global Active Power (kilowatts)"
 main <- "Global Active Power"
 png("data/plot1.png")
+par(bg = "transparent") ## matching original bg
 with(myDT, {
      hist(Global_active_power, xlab = xlab, main = main, 
           col = "red", bg = "transparent", axes = F)
